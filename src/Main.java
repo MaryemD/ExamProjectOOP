@@ -26,7 +26,7 @@ public class Main {
             while (!loggedIn) {
                 System.out.println("Do you want to (1) Log In or (2) Create an Account?");
                 int choice = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
 
                 if (choice == 1) {
                     boolean customerLoggedIn = login(users, scanner, customer);
@@ -102,7 +102,7 @@ public class Main {
             System.out.println("5. Logout");
 
             int adminChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             switch (adminChoice) {
                 case 1:
@@ -149,7 +149,7 @@ public class Main {
             System.out.println("12. Logout");
 
             int customerChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (customerChoice) {
                 case 1:
@@ -241,14 +241,13 @@ public class Main {
     public static void addReviewForProduct(Scanner scanner, Customer customer) {
         System.out.println("Enter the ID of the product you want to review:");
         int productId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-
+        scanner.nextLine(); 
         System.out.println("Enter your review comment:");
         String comment = scanner.nextLine();
 
         System.out.println("Enter your rating (out of 5):");
         int rating = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         Product product = customer.getProductById(productId);
         if (product != null) {
