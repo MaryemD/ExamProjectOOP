@@ -42,7 +42,7 @@ public class Admin extends User {
 
         System.out.println("Enter product price:");
         double price = scanner.nextDouble();
-        scanner.nextLine(); // Consume the newline character
+        scanner.nextLine(); 
 
         System.out.println("Enter product quantity:");
         int quantity = scanner.nextInt();
